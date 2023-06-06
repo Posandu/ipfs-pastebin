@@ -41,15 +41,11 @@
 
 	let location: any = {};
 
-	onMount(() => {
-		id = window.location.hash ? window.location.hash.slice(1) : "___";
+	id = window.location.hash ? window.location.hash.slice(1) : "___";
 
-		if (id !== "___") {
-			get();
-		}
+	get();
 
-		location = window.location;
-	});
+	location = window.location;
 
 	const debounce = (callback: any, wait: number) => {
 		let timeoutId: number = 0;
